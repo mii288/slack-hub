@@ -1,12 +1,15 @@
-import { PORT, SLACK_BOT_TOKEN, SLACK_SIGNING_SECRET } from '@/config'
-import { SlackEventsSubscriber } from '@/SlackEventsSubscriber';
-import { App } from '@slack/bolt'
+import { PORT, SLACK_BOT_TOKEN, SLACK_SIGNING_SECRET } from "@/config";
+import { SlackEventsSubject } from "@/subject/SlackEventsSubject";
+import { App } from "@slack/bolt";
+import { ExampleSlackHubObserver } from "@/observer/ExampleSlackHubObserver";
 
 const app = new App({
-	token: SLACK_BOT_TOKEN,
-	signingSecret: SLACK_SIGNING_SECRET
+  token: SLACK_BOT_TOKEN,
+  signingSecret: SLACK_SIGNING_SECRET,
 });
 
-new SlackEventsSubscriber(app).start()
+const subject = new SlackEventsSubject(app);
+subject.addObserver(new ExampleSlackHubObserver());
+subject.init();
 
-app.start(PORT).then(() => console.log('Running'))
+app.start(PORT).then(() => console.log("Running"));
