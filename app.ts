@@ -12,4 +12,6 @@ const subject = new SlackEventsSubject(app);
 subject.addObserver(new ExampleSlackHubObserver());
 subject.init();
 
-app.start(PORT).then(() => console.log("Running"));
+app
+  .start(PORT)
+  .then(() => console.log(`Server running at http://localhost:${PORT}`));
