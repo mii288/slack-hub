@@ -32,7 +32,7 @@
     "*": "prettier --write"
   },
   "importSort": {
-    ".ts": {
+    ".ts, .js": {
       "style": "module",
       "parser": "typescript"
     }

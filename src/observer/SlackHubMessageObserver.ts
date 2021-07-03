@@ -9,7 +9,7 @@ export class SlackHubMessageObserver implements BaseSlackHubObserver {
 
   constructor() {
     // TODO: 一旦ベタ書き
-    this.endpointUrls = [];
+    this.endpointUrls = ["http://localhost:3001"];
   }
 
   async update(context: MessageContext) {
