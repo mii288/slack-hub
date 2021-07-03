@@ -1,6 +1,6 @@
+import { MessageContext } from "@/observer/BaseSlackHubObserver";
 import { BaseSubject } from "@/subject/BaseSubject";
 import { App } from "@slack/bolt";
-import { MessageContext } from "@/observer/BaseSlackHubObserver";
 
 export class SlackEventsSubject extends BaseSubject<MessageContext> {
   app: App;

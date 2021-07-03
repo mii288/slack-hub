@@ -1,6 +1,6 @@
 import {
-  MessageContext,
   BaseSlackHubObserver,
+  MessageContext,
 } from "@/observer/BaseSlackHubObserver";
 
 const isBotMessage = ({ message }: MessageContext): boolean => {
