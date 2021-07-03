@@ -1,0 +1,33 @@
+_metadata:
+  major_version: 1
+  minor_version: 1
+display_information:
+  name: slack-hub
+features:
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: false
+  bot_user:
+    display_name: slack-hub
+    always_online: true
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - chat:write.public
+      - chat:write
+      - emoji:read
+      - groups:history
+      - im:history
+      - mpim:history
+settings:
+  event_subscriptions:
+    request_url: http://297e0e854ea6.ngrok.io/slack/events
+    bot_events:
+      - message.channels
+      - message.groups
+      - message.im
+      - message.mpim
+  org_deploy_enabled: false
+  socket_mode_enabled: false
