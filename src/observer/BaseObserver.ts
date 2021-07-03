@@ -1,3 +1,3 @@
 export interface BaseObserver<T> {
-	update(context: T): void 
+  update(context: T): void;
 }

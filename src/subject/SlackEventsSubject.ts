@@ -16,7 +16,7 @@ export class SlackEventsSubject extends BaseSubject<MessageContext> {
         next && (await next());
       },
       async (context) => {
-        this.notifyObservers(context)
+        this.notifyObservers(context);
       }
     );
   }
