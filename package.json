@@ -30,6 +30,7 @@
     "*.{js,css,md,json}": "prettier --write"
   },
   "dependencies": {
+    "@slack/bolt": "^3.4.0",
     "dotenv": "^10.0.0"
   }
 }
