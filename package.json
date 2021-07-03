@@ -1,0 +1,32 @@
+{
+  "name": "slack-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --files -r tsconfig-paths/register app",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mii288/slack-hub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mii288/slack-hub/issues"
+  },
+  "homepage": "https://github.com/mii288/slack-hub#readme",
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "*.{js,css,md,json}": "prettier --write"
+  }
+}
