@@ -1,5 +1,6 @@
 import { PORT, SLACK_BOT_TOKEN, SLACK_SIGNING_SECRET } from "@/config";
 import { ExampleSlackHubObserver } from "@/observer/ExampleSlackHubObserver";
+import { SlackHubMessageObserver } from "@/observer/SlackHubMessageObserver";
 import { SlackEventsSubject } from "@/subject/SlackEventsSubject";
 import { App } from "@slack/bolt";
 
@@ -10,6 +11,7 @@ const app = new App({
 
 const subject = new SlackEventsSubject(app);
 subject.addObserver(new ExampleSlackHubObserver());
+subject.addObserver(new SlackHubMessageObserver());
 subject.init();
 
 app
